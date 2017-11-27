@@ -1,1 +1,35 @@
 Spring
+
+Beans Scopes
+	domyslnie jest singletonem
+		wszystkie spring containers are using only one instance
+		its cached in memory
+		all request will return reference to the same bean
+		np.:
+			Coach theCoach = context.getBean("tennisCoach", Coach.class);
+			Coach alphaCoach = context.getBean("tennisCoach", Coach.class);
+			using the same object
+	Za pomoca adnotacji mozna zdefiniowac jaki jest zakres
+	@Scope("singleton");
+	
+	Jest tez scope prototype, nowy obiekt dla kazdego requestu
+	
+	@Comoponent
+	@Scope("prototype")
+	
+	Mozna dodac bean dodac kod do inicjalizacji albo przy niszczeniu obiektu
+		Inicjalizacja:
+			@Component
+			public class ...
+				@PostConstruct
+				metoda
+		Niszczenie
+				@PreDestroy
+				metoda
+	
+Konfiguracja Springa przy uzyciu klas Java
+	nie trzeba uzywac plikow XML
+
+	
+	
+		
