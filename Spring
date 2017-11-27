@@ -30,6 +30,19 @@ Beans Scopes
 Konfiguracja Springa przy uzyciu klas Java
 	nie trzeba uzywac plikow XML
 
+XML :: kazdy bean musi byc skonfigurowany xml
+
+XML :: component scan, komponent skan, wyszczegolniamy tylko pakiet jaki ma byc przeskanowany
+
+JavaConfiguration
+	tylko java, tutaj wyszczegolniamy jakie pakiety maja byc brane pod uwage przy skanowaniu, nie uzywamy xml'a
 	
+	Tworzenie klasy przy uzyciu adnotacji @Configuration; @ComponentScan opcjonalny, nastepnie czytanie klasy spring z konfiguracja
+	Pociagniecie beanu Spring z kontenera
+	Wczytujemy klase AnnotationConfigApplicationContext = new AnnotationConfigApplicationContext(KlasaConfig.class);
+	Mozemy dodac definicje @Bean ale wtedy bez configurationscan
+		wtedy kazdy bean musi zostac zdefiniowany oddzielnie
+			kazda nazwa metody jest wlasciwie BeanID
+		
 	
 		
