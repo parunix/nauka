@@ -43,6 +43,20 @@ JavaConfiguration
 	Mozemy dodac definicje @Bean ale wtedy bez configurationscan
 		wtedy kazdy bean musi zostac zdefiniowany oddzielnie
 			kazda nazwa metody jest wlasciwie BeanID
-		
+	Wczytywanie plikow, wlasciwosci, property file, dodanie:
+		@PropertySource("classpath:sport.properties")	
+
+Spring MVC
+	Model View Controller
+	
+	BROWSER [request] -> Front Controller -> Model -> Controller -> Model -> View Template -> [request] BROWSER
+	
+	Benefits:
+		Reusable UI components,
+		menage application tracing, request tracking,
+		process forms
+		you can use many view layes (not only JSP)
+	
+
 	
 		
