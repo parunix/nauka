@@ -76,3 +76,49 @@ Spring MVC
 		provide data to the user
 		jsp, themeleaf, groovy, velocity, freemarker
 		
+		
+MVC Configuration
+	configuration to WEB-INF/web.xml :: MVC dispatcher servlet
+	<serlvet>
+			<servlet-name>dispatcher</servlet-name>
+			<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+			
+		init parameter have to be bean configuration path	
+			<init-param>
+				<param-name>contextConfiguration</param-name>
+				<param-value>/WEB-INF/spring-mvc-demo-servlet.xml</param-value>
+			</init-param>
+			
+		</serlvet>	
+
+	setup URL mappings to Spring MVC Dispatcher Servlet, for every url pattern that comming in pass throw dispatcher
+	
+		<servlet-mapping>
+			<servlet-name>dispatcher</servlet-name>
+			<url-pattern>/</url-pattern>
+		</servlet-mapping>
+	
+	create servlet.xml configuration
+		
+		<beans>
+			
+			<!-- adding support for component scanning -->
+			<context:component-scan base=package="com.luv2code.springdemo" />
+			<!-- add support for conversion, formatting and validation support -->
+			<mvc:annotation-driven/>
+			<!-- define spring MVC view resolver :: how dipslay pages -->
+			<bean
+				class="org.springframework.web.servlet.view.InternResourceViewResolver">
+				<!-- where to look for files -->
+				<property name="prefix" value="/WEB-INF/view/" />
+				<!-- files patterns -->
+				<property name="suffix" value=".jsp" />
+			</bean>
+			
+		</beans>
+	
+	support for Spring component scanning
+	add support for conversion, formatting and validation
+	configure Spring MVC View Resolver
+	
+	
