@@ -122,3 +122,18 @@ MVC Configuration
 	configure Spring MVC View Resolver
 	
 	
+	
+	Development Process
+	
+		Create Controller class
+		Define Controller method
+		Add Request Mapping to Controller method
+		Return View Name
+		Develop View Page
+	
+	Applicatioin Flow
+	
+	RequestMapping [przegladarka/formularz] -> HelloWorldController -> 
+	helloworld-form.jsp -> [request mapping /processForm] HelloWorldCOntroller -> helloworld.jsp
+		
+	Jeden kontroler ogarnie dwa requesty (jeden pokazanie formularza, drugi jego przetworzenie )
