@@ -57,6 +57,22 @@ Spring MVC
 		process forms
 		you can use many view layers (not only JSP)
 	
-
+	Front controller [DispatcherServlet / dyspozytor servlet]
+		delegete request to other object or items
+		developer create then only view, model and controller
+	Model objects contain data
+		data container
+	View template is JSP page
 	
+	Controller is bussines logic
+		created code, handles web request
+		
+	Model
+		Store retrive data via backend system
+			database, web service, etc
+			spring bean as data
+			and put data into model
+	View
+		provide data to the user
+		jsp, themeleaf, groovy, velocity, freemarker
 		
