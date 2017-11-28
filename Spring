@@ -137,3 +137,8 @@ MVC Configuration
 	helloworld-form.jsp -> [request mapping /processForm] HelloWorldCOntroller -> helloworld.jsp
 		
 	Jeden kontroler ogarnie dwa requesty (jeden pokazanie formularza, drugi jego przetworzenie )
+	
+	
+	
+	
+	
